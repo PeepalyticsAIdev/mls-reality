@@ -37,7 +37,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Us */}
         <div>
           <h4 className="font-semibold mb-4">Contact Us</h4>
           <p>Oualie Bay, Nevis, West Indies</p>
