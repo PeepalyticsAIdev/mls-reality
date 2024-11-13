@@ -13,20 +13,20 @@ const config: Config = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#1E90FF', // Blue for primary buttons/links
-          dark: '#1C3D5A', // Dark blue for headers and footers
+          DEFAULT: '#1E90FF', 
+          dark: '#1C3D5A', 
         },
         secondary: {
-          green: '#28A745', // Green for success messages
-          red: '#DC3545', // Red for error messages
+          green: '#28A745', 
+          red: '#DC3545',
         },
         neutral: {
-          darkGray: '#343A40', // Primary text
-          mediumGray: '#6C757D', // Secondary text
-          lightGray: '#F8F9FA', // Backgrounds and borders
+          darkGray: '#343A40',
+          mediumGray: '#6C757D',
+          lightGray: '#F8F9FA', 
         },
         accent: {
-          orange: '#FD7E14', // Highlight and callouts
+          orange: '#FD7E14',
         },
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -41,7 +41,8 @@ const config: Config = {
         ring: 'hsl(var(--ring))',
       },
       fontFamily: {
-        sans: ['Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+		  sans: ['Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+		  lora: 'Lora'
       },
       fontSize: {
         display: ['48px', { lineHeight: '1.2', fontWeight: '700' }],

@@ -22,7 +22,7 @@ const NavBar = () => {
                 </div>
 
 
-                <div className="flex items-center space-x-6 text-neutral-lightGray text-sm font-semibold">
+                <div className="hidden md:flex items-center space-x-6 text-neutral-lightGray text-sm font-semibold">
 
                     <Link href="/" className="hover:underline">Home</Link>
 
@@ -55,9 +55,40 @@ const NavBar = () => {
                 </div>
             </div>
 
+            <div className="md:hidden flex items-center">
+                <DropdownMenu>
+                    <DropdownMenuTrigger>
+                        <Image src="/hambuger.png" alt="Menu" width={24} height={24} />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent sideOffset={8}>
+                        <DropdownMenuItem asChild>
+                            <Link href="/" className="hover:underline">Home</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                            <Link href="/about" className="hover:underline">About Us</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                            <Link href="/sales" className="hover:underline">Sales</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                            <Link href="/rentals" className="hover:underline">Rentals</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                            <Link href="/resources/resource1">Resource 1</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                            <Link href="/resources/resource2">Resource 2</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                            <Link href="/contact" className="hover:underline">Contact Us</Link>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            </div>
 
 
-            <Link href="/contact" className="w-[123px] text-center bg-neutral-lightGray text-primary-dark font-semibold text-sm px-4 py-2 rounded-full hover:bg-neutral-mediumGray">
+
+            <Link href="/contact" className="hidden md:block w-[123px] text-center bg-neutral-lightGray text-primary-dark font-semibold text-sm px-4 py-2 rounded-full hover:bg-neutral-mediumGray">
                 Contact Us
             </Link>
         </nav>
