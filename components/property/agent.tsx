@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const Agent = () => {
   return (
-    <section className="flex items-center gap-5 w-[500px] max-xs:w-full rounded-xl p-5 shadow-2xl">
+    <section className="flex items-center gap-5 bg-white max-xs:w-full rounded-xl p-5">
       {/* vaata */}
 
       <Avatar className='xs:w-[64px] xs:h-[64px]'>
