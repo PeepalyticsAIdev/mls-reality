@@ -22,15 +22,11 @@ import {
   PaginationLink,
   PaginationNext,
 } from '../ui/pagination';
+import { sortOptions } from '@/lib/shared/data';
+import { getCurrentSortLabel } from '@/lib/utils';
 import PropertyListingCard from './property-listing-card';
 
 const DEFAULT_ITEMS_PER_PAGE = 12;
-
-const sortOptions: { label: string; value: SortOption }[] = [
-  { label: 'Price: Low to High', value: { field: 'price', direction: 'asc' } },
-  { label: 'Price: High to Low', value: { field: 'price', direction: 'desc' } },
-  { label: 'Newest First', value: { field: 'createdAt', direction: 'desc' } },
-];
 
 const containerVariants = {
   hidden: {},
@@ -49,6 +45,8 @@ export default function PropertyListings({
 }: PropertyListingsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  const sort = searchParams.get('sort') || 'createdAt-desc';
 
   const currentPage = Number(searchParams.get('page')) || 1;
 
@@ -134,7 +132,6 @@ export default function PropertyListings({
 
   const { startIndex, endIndex, totalItems } = paginationInfo;
   const currentProperties = properties.slice(startIndex, endIndex);
-
   return (
     <section aria-label="Property listings" className="mb-24">
       <div className="bg-neutral-lightGray flex items-center justify-between px-12 py-7">
@@ -144,7 +141,7 @@ export default function PropertyListings({
 
         <DropdownMenu>
           <DropdownMenuTrigger className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
-            Sort by
+            Sort by {sort && `: ${getCurrentSortLabel(sort)}`}
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Sort Options</DropdownMenuLabel>
