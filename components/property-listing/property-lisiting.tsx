@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence } from 'motion/react';
+import { AnimatePresence, m } from 'motion/react';
 
 import { PropertyListingsProps, SortOption } from '@/types/property-listing';
 import {
@@ -160,7 +160,7 @@ export default function PropertyListings({
 
       <ErrorBoundary>
         <AnimatePresence mode="wait">
-          <motion.div
+          <m.div
             key={currentPage}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 px-12 mt-3 mb-6"
             variants={containerVariants}
@@ -175,7 +175,7 @@ export default function PropertyListings({
                 priority={index < 6} // Only prioritize loading for above-the-fold images
               />
             ))}
-          </motion.div>
+          </m.div>
         </AnimatePresence>
       </ErrorBoundary>
 

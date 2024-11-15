@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import Image from 'next/image';
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
 import { Property } from '@/types/property-listing';
 
 interface PropertyCardProps {
@@ -30,7 +30,7 @@ function PropertyListingCard({ property, priority = false }: PropertyCardProps) 
   }).format(price);
 
   return (
-    <motion.div className="relative" variants={itemVariants}>
+    <m.div className="relative" variants={itemVariants}>
       <span className="absolute left-4 top-4 z-20 bg-white text-neutral-darkGray py-3 px-4 rounded-full font-sans text-body font-medium">
         {type}
       </span>
@@ -65,7 +65,7 @@ function PropertyListingCard({ property, priority = false }: PropertyCardProps) 
           <li>{features.squareFeet.toLocaleString()} sq.ft</li>
         </ul>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
