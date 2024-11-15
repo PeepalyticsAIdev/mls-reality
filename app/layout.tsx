@@ -18,9 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'MLS Realty - Nevis & St. Kitts',
-  description:
-    'A comprehensive real estate platform for Nevis & St. Kitts, consolidating property listings, enhancing market transparency, and attracting local and international buyers.',
+  title: "MLS Realty - St. Kitts & Nevis",
+  description: "A comprehensive real estate platform for Nevis & St. Kitts, consolidating property listings, enhancing market transparency, and attracting local and international buyers.",
 };
 
 export default function RootLayout({
