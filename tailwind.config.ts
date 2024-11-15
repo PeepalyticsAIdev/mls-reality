@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: ['class'],
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -13,20 +13,21 @@ const config: Config = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#1E90FF', 
-          dark: '#1C3D5A', 
+          DEFAULT: '#1E90FF',
+          dark: '#1C3D5A',
         },
         secondary: {
-          green: '#28A745', 
+          green: '#28A745',
           red: '#DC3545',
         },
         neutral: {
           darkGray: '#343A40',
           mediumGray: '#6C757D',
-          lightGray: '#F8F9FA', 
+          lightGray: '#F8F9FA',
         },
         accent: {
           orange: '#FD7E14',
+          gray: '#D5D7DA',
         },
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -41,8 +42,8 @@ const config: Config = {
         ring: 'hsl(var(--ring))',
       },
       fontFamily: {
-		  sans: ['Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-		  lora: 'Lora'
+        sans: ['Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        lora: 'Lora',
       },
       fontSize: {
         display: ['48px', { lineHeight: '1.2', fontWeight: '700' }],
@@ -75,7 +76,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require('tailwindcss-animate')],
 };
 
 export default config;
